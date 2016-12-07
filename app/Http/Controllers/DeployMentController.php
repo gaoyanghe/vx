@@ -8,7 +8,7 @@ class DeployMentController extends Controller
 {
     //自动更新
     public function deploy(Request $request){
-        $commands=['cd D:/UPUPW/vhosts/vx.haoall.com','git pull'];
+        $commands=['cd D:/UPUPW/vhosts/vx.haoall.com','git pull origin master'];
         $signature=$request->header('X-Hub-Signature');
         $payload=file_get_contents('php://input');
         if ($this->isFromGithub($payload,$signature)){
