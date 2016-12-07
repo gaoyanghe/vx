@@ -12,9 +12,8 @@
 */
 
 Route::get('/', function () {
-//    return view('home/myinfo');
+    return view('home/myinfo');
 //    return view('home/mymenu');
-    return view('welcome');
 });
 Route::any('/wechat', 'WechatController@serve');
-Route:any('/deploy','DeployMentController@deploy');
+Route::any('/deploy','DeployMentController@deploy');
